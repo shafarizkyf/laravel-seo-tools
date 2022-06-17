@@ -84,13 +84,18 @@ class SettingController extends Controller
     {
         $settings = $request->get('settings', []);
         foreach ($settings as $key => $fields) {
-            Setting::where('key', $key)->update($fields);
+            $settings = Setting::firstOrNew(['key' => $key]);
+            $settings->value = $fields['value'];
+            $settings->save();
         }
+
         $fields = $request->file('settings', []);
         $files = Setting::upload($fields);
 
         foreach ($files as $key => $fileFields) {
-            Setting::where('key', $key)->update($fileFields);
+            $settings = Setting::firstOrNew(['key' => $key]);
+            $settings->value = $fileFields['value'];
+            $settings->save();
         }
         session()->flash(config('seo.flash_message'), 'Setting successfully updated');
         return redirect()->back();
