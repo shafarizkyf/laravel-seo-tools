@@ -90,13 +90,4 @@
             </div>
         </div>
     </div>
-
-    <div class="card bg-light mt-lg-3">
-        <div class="card-body">
-            <p>Do not have knowledge about On Page SEO. Thats no problem. <a href="https://moz.com/learn/seo">
-                    Here is an awesome tutorial series on moz.com</a>. That teaches you all
-            </p>
-        </div>
-
-    </div>
 </div>
