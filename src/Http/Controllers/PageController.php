@@ -95,6 +95,9 @@ class PageController extends Controller
         $page = new Page();
         $metaTags = $page->pageLevel();
 
+        $og = [];
+        $twitter = [];
+
         if (isset($metaTags['og'])) {
             $og = $metaTags['og'];
             unset($metaTags['og']);
@@ -147,6 +150,9 @@ class PageController extends Controller
     {
         $keywordAnalysis = false;
         $metaTags = $page->metaTags();
+
+        $og = [];
+        $twitter = [];
 
         if (isset($metaTags['og'])) {
             $og = $metaTags['og'];
