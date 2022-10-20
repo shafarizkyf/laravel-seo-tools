@@ -75,7 +75,7 @@
 <div class="form-group">
     <label for="page_description">Description</label>
     <textarea class="form-control" name="page[description]" id="page_description" placeholder="Meta description"
-              maxlength="170">{{old('page.description',$model->getDescription())}}</textarea>
+              maxlength="300">{{old('page.description',$model->getDescription())}}</textarea>
 
 
     @if($errors->has('page.description'))

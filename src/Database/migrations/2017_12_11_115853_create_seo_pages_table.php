@@ -23,7 +23,7 @@ class CreateSeoPagesTable extends Migration
             $table->string('canonical_url')->nullable();
             $table->string('title', 100)->nullable()->index();
             $table->string('title_source', 100)->nullable()->index();
-            $table->string('description', 180)->nullable();
+            $table->text('description')->nullable();
             $table->string('description_source', 180)->nullable();
             $table->timestamps();
         });
