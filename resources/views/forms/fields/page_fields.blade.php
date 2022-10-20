@@ -15,7 +15,6 @@
     <div class="form-group col-sm-3">
         <label for="page_robot_index">Robot Index</label>
         <select class="form-control" name="page[robot_index]" id="page_robot_index">
-            <option value="">Default</option>
             <option value="index" {{old('page.robot_index',$model->robot_index)=='index'?'selected':''}}>Index
             </option>
             <option value="noindex" {{old('page.robot_index',$model->robot_index)=='noindex'?'selected':''}}>No
@@ -32,7 +31,6 @@
     <div class="form-group col-sm-3">
         <label for="page_robot_follow">Robot Follow</label>
         <select class="form-control" name="page[robot_follow]" id="page_robot_follow">
-            <option value="">Default</option>
             <option value="follow" {{old('page.robot_follow',$model->robot_follow)=='follow'?'selected':''}}>Follow
             </option>
             <option value="nofollow" {{old('page.robot_follow',$model->robot_follow)=='nofollow'?'selected':''}}>No
