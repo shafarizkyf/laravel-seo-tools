@@ -32,7 +32,7 @@ class Store extends FormRequest
             'page.robot_follow' => 'nullable|max:50',
             'page.canonical_url' => 'nullable|max:255',
             'page.title' => 'required|max:70',
-            'page.description' => 'required|max:170',
+            'page.description' => 'required|max:300',
         ];
     }
 
